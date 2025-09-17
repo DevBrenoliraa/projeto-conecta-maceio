@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url(./components/headerStyle.css);
+@import url(./components/footerStyle.css);
+
+:root {
+    /* Colors */
+    --color-primary: #F9F6F3;
+    --color-secondary: #1179BE;
+    --color-accent: #F3A223;
+    --color-extra: #184881;
+
+    /* Font */
+    --font-poppins: "Poppins", sans-serif;
+
+    /* Font sizes */
+    --font-size-title: 32px;
+    --font-size-subtitle: 24px;
+    --font-size-text: 16px;
+
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primary);
+    overflow: auto;
+}
+
+section {
+    margin-top: 38px;
+}
+
+main {
+    padding: 0px 360px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* HERO SECTION  */
+#hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.hero_banner {
+    height: 450px;
+    width: 1200px;
+}
+
+.hero_cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.hero_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 160px;
+    width: 384px;
+    border: 3px solid var(--color-secondary);
+    border-radius: 30px;
+}
+
+.hero_card_title {
+    color: var(--color-accent);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-bold);
+}
+
+.hero_card_subtitle {
+    color: var(--color-secondary);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-bold);
+}
+
+/* PRODUCTS SECTION */
+#products {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.products_title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-poppins);
+    color: var(--color-accent);
+}
+
+.products_title::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 6px;
+    background-color: var(--color-secondary);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 32px auto;
+    margin-left: -11px;
+}
+
+.products_Card {
+    height: 520px;
+    width: 384px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 35px 35px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+}
+
+.product_Imagem {
+    background-color: #d4d4d46c;
+    border-radius: 30px;
+    padding: 30px;
+    height: 290px;
+    width: auto;
+}
+
+.product_title {
+    margin-top: 35px;
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-family: var(--font-poppins);
+    align-items: flex-;
+    color: #2e2e2e;
+}
+
+.product_title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #d4d4d464;
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+.card_footer {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.product_preco {
+    font-size: var(--font-size-subtitle);
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+}
+
+.btn_comprar {
+    height: 40px;
+    width: 100px;
+    /* padding: 10px 8px; */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: var(--color-accent);
+    font-family: var(--font-poppins);
+    color: var(--color-primary);
+    font-size: var(--font-size-text);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn_comprar:hover {
+    background-color: var(--color-secondary);
+}
