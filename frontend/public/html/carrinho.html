@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrinho</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Carrinho</h1>
+  <form id="add-item-form">
+    <label for="item-id">ID do Item:</label>
+    <input type="text" id="item-id" name="item-id" required>
+    <label for="item-name">Nome do Item:</label>
+    <input type="text" id="item-name" name="item-name" required>
+    <label for="item-price">Preço do Item:</label>
+    <input type="text" id="item-price" name="item-price" required>
+    <button type="submit" id="add-to-cart">Adicionar ao Carrinho</button>
+  </form>
+  <h2>Itens do Carrinho:</h2>
+  <ul id="cart-items"></ul>
+</body>
+</html>
