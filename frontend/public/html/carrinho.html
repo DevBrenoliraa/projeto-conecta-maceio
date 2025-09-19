@@ -1,23 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-  <title>Carrinho</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../js/carrinho.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/carrinhoStyle.css">
 </head>
+
 <body>
-  <h1>Carrinho</h1>
-  <form id="add-item-form">
-    <label for="item-id">ID do Item:</label>
-    <input type="text" id="item-id" name="item-id" required>
-    <label for="item-name">Nome do Item:</label>
-    <input type="text" id="item-name" name="item-name" required>
-    <label for="item-price">Preço do Item:</label>
-    <input type="text" id="item-price" name="item-price" required>
-    <button type="submit" id="add-to-cart">Adicionar ao Carrinho</button>
-  </form>
-  <h2>Itens do Carrinho:</h2>
-  <ul id="cart-items"></ul>
+  <header class="header">
+    <a href="../index.html" class="header_logo">
+      <img src="../assets/svg/logo-conecta-maceio.svg" alt="Logo Conecta Maceió">
+    </a>
+    <div class="header_search">
+      <input type="text" placeholder="Conecte-se com Maceió" id="header-search-input">
+      <button id="header-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <!-- icone de lupa -->
+    </div>
+    <nav class="header_icons">
+      <a href="./html/carrinho.html" id="header-icons">
+        <i class="fa-solid fa-cart-shopping"></i> <!-- icone de carrinho -->
+      </a>
+      <a href="" id="header-icons">
+        <i class="fa-solid fa-circle-user"></i> <!-- icone de login -->
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div id="cart-container"></div> <!-- antes era carrinho-container -->
+    <div class="summary">
+      <h3>Subtotal:</h3>
+      <ul id="subtotal-items"></ul>
+      <div class="total">
+        <h3>Total:</h3>
+        <p id="cart-total">R$ 0,00</p> <!-- antes era total-value -->
+      </div>
+      <div class="buttons">
+        <button class="btn-back">Voltar às compras</button>
+        <button class="btn-checkout">Finalizar pagamento</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="../assets/svg/logo-conecta-maceio.svg" alt="Logotipo Conecta Maceió">
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Sobre Nós</a>
+        <a href="#" class="footer__link">Contato</a>
+        <a href="#" class="footer__link">Política de Privacidade</a>
+      </div>
+    </div>
+    <p class="footer__copy">© 2025 Prefeitura de Maceió. Todos os direitos reservados.</p>
+  </footer>
+  <script src="../js/carrinho.js"></script>
 </body>
+
 </html>
